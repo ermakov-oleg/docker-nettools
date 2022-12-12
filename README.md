@@ -15,7 +15,7 @@ metadata:
   name: nettools
   namespace: default
 spec:
-  hostNetwork: true
+  # hostNetwork: true # if you need test host network
   containers:
   - name: nettools
     image: ghcr.io/ermakov-oleg/docker-nettools
