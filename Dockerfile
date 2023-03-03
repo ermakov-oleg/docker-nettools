@@ -9,6 +9,7 @@ RUN apt update && \
         dnsutils \
         vim \
         tmux \
+        telnet \
         watch \
         iputils-ping
 
