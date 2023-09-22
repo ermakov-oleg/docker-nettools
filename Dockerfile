@@ -14,7 +14,7 @@ RUN apt update && \
         iputils-ping
 
 RUN echo "deb [signed-by=/usr/share/keyrings/azlux-archive-keyring.gpg] http://packages.azlux.fr/debian/ stable main" | tee /etc/apt/sources.list.d/azlux.list && \
-    curl https://azlux.fr/repo.gpg | apt-key add - && \
+    curl https://azlux.fr/repo.gpg -o /usr/share/keyrings/azlux-archive-keyring.gpg && \
     apt update && \
     apt install oha
 
