@@ -1,4 +1,4 @@
-FROM debian:bullseye-slim
+FROM python:3.11-slim-bullseye
 
 RUN apt update && \
     apt install -y \
@@ -19,6 +19,8 @@ RUN echo "deb http://packages.azlux.fr/debian/ buster main" | tee /etc/apt/sourc
     apt install oha
 
 RUN curl -o /usr/bin/hey https://hey-release.s3.us-east-2.amazonaws.com/hey_linux_amd64 && chmod +x /usr/bin/hey
+
+RUN pip install py-spy
 
 STOPSIGNAL SIGKILL
 
