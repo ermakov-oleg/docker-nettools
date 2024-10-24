@@ -11,6 +11,7 @@ RUN apt update && \
         tmux \
         telnet \
         watch \
+        tcpdump \
         iputils-ping
 
 RUN echo "deb [signed-by=/usr/share/keyrings/azlux-archive-keyring.gpg] http://packages.azlux.fr/debian/ stable main" | tee /etc/apt/sources.list.d/azlux.list && \
