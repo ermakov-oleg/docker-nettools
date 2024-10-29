@@ -14,7 +14,8 @@ RUN apt update && \
         tcpdump \
         iputils-ping \
         iproute2 \
-        lsof
+        lsof \
+        gdb
 
 RUN echo "deb [signed-by=/usr/share/keyrings/azlux-archive-keyring.gpg] http://packages.azlux.fr/debian/ stable main" | tee /etc/apt/sources.list.d/azlux.list && \
     curl https://azlux.fr/repo.gpg -o /usr/share/keyrings/azlux-archive-keyring.gpg && \
