@@ -6,6 +6,18 @@ kubectl run -it --image=ghcr.io/ermakov-oleg/docker-nettools nettools --restart=
 ```
 
 
+Debug pod:
+
+```
+kubectl debug -it --image=ghcr.io/ermakov-oleg/docker-nettools --profile=sysadmin -c debugger <pod-name> -- bash
+```
+
+Debug node:
+
+```bash
+ubectl debug node/<node-name> -it --image=ghcr.io/ermakov-oleg/docker-nettools -- bash
+```
+
 Pod template example:
 
 ```
