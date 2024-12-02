@@ -24,7 +24,7 @@ RUN echo "deb [signed-by=/usr/share/keyrings/azlux-archive-keyring.gpg] http://p
 
 RUN curl -o /usr/bin/hey https://hey-release.s3.us-east-2.amazonaws.com/hey_linux_amd64 && chmod +x /usr/bin/hey
 
-RUN pip install memray py-spy
+RUN pip install memray py-spy httpstat
 
 STOPSIGNAL SIGKILL
 
